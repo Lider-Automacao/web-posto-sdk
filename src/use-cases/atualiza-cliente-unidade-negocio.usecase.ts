@@ -17,7 +17,7 @@ export class AtualizaClienteUnidadeNegocio {
       throw WebPostoError.fromZodError("Dados de envio inválidos", parsedData.error);
     }
 
-    await this.api.put(`/INTEGRACAO/CLIENTE_UNIDADE_NEGOCIO`, {
+    await this.api.post(`/INTEGRACAO/CLIENTE_UNIDADE_NEGOCIO`, {
       params: parsedData.data
     });
   }

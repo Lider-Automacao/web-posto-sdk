@@ -2,13 +2,14 @@ import { Optional } from "@raicamposs/toolkit";
 import { Credenciais, CredenciaisApiSchema } from "./api/credenciais-api";
 import { WebPostoApi } from "./api/web-posto-api.service";
 import { WebPostoError } from "./errors/web-posto.error";
-import { EmpresaService, FuncionarioService, TituloReceberService, VendasService } from "./services";
+import { ClienteService, EmpresaService, FuncionarioService, TituloReceberService, VendasService } from "./services";
 
 export class WebPostoSDK {
   private readonly tituloReceberService: TituloReceberService;
   private readonly empresaService: EmpresaService;
   private readonly funcionarioService: FuncionarioService;
   private readonly vendasService: VendasService;
+  private readonly clienteService: ClienteService;
 
   constructor(credenciais: Optional<Credenciais, 'url'>) {
 
@@ -23,6 +24,7 @@ export class WebPostoSDK {
     this.empresaService = new EmpresaService(api);
     this.funcionarioService = new FuncionarioService(api);
     this.vendasService = new VendasService(api);
+    this.clienteService = new ClienteService(api);
   }
 
   public get titulo() {
@@ -41,4 +43,7 @@ export class WebPostoSDK {
     return this.vendasService;
   }
 
+  public get cliente() {
+    return this.clienteService;
+  }
 }
