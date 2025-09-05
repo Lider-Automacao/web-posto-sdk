@@ -1,23 +1,8 @@
 
 import { WebPostoApi } from "@/api/web-posto-api.service";
 import { WebPostoError } from "@/errors/web-posto.error";
-import { EmpresaSchema } from "@/models/empresa";
-import { QuerySchema } from "@/types/request-type";
-import { ResponseSchema } from "@/types/response-type";
-import z from "zod";
-
-
-const PesquisaEmpresasRequestSchema = QuerySchema.extend({
-  empresaCodigo: z.number().nullish(),
-});
-
-
-const PesquisaEmpresasResponseSchema = ResponseSchema.extend({
-  resultados: z.array(EmpresaSchema).default([]),
-})
-
-export type PesquisaEmpresasRequest = z.infer<typeof PesquisaEmpresasRequestSchema>
-export type PesquisaEmpresasResponse = z.infer<typeof PesquisaEmpresasResponseSchema>
+import { PesquisaEmpresasRequest, PesquisaEmpresasRequestSchema } from "../dto/pesquisa-empresas-request";
+import { PesquisaEmpresasResponse } from "../dto/pesquisa-empresas-response";
 
 
 export class PesquisaEmpresas {

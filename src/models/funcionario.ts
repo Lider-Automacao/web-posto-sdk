@@ -13,5 +13,5 @@ export const FuncionarioSchema = z.object({
   codigo: z.number(),
 })
 
-export type Funcionarios = z.infer<typeof FuncionarioSchema>
+export type Funcionario = z.infer<typeof FuncionarioSchema>
 

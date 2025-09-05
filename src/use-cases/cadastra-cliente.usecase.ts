@@ -1,21 +1,8 @@
 
 import { WebPostoApi } from "@/api/web-posto-api.service";
 import { WebPostoError } from "@/errors/web-posto.error";
-import { ClienteSchema } from "@/models";
-import z from "zod";
-
-
-const CadastraClienteRequestSchema = z.object({
-  cliente: ClienteSchema,
-})
-
-const CadastraClienteResponseSchema = z.object({
-  codCliente: z.number(),
-})
-
-export type CadastraClienteRequest = z.infer<typeof CadastraClienteRequestSchema>
-export type CadastraClienteResponse = z.infer<typeof CadastraClienteResponseSchema>
-
+import { CadastraClienteRequest, CadastraClienteRequestSchema } from "../dto/cadastra-cliente-request";
+import { CadastraClienteResponse, CadastraClienteResponseSchema } from "../dto/cadastra-cliente-response";
 
 export class CadastraCliente {
   private readonly api: WebPostoApi

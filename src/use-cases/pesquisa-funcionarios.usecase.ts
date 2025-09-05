@@ -1,22 +1,7 @@
 import { WebPostoApi } from "@/api/web-posto-api.service";
 import { WebPostoError } from "@/errors/web-posto.error";
-import { FuncionarioSchema } from "@/models";
-import { QuerySchema } from "@/types/request-type";
-import { ResponseSchema } from "@/types/response-type";
-import z from "zod";
-
-
-const PesquisaFuncionariosRequestSchema = QuerySchema.extend({
-  empresaCodigo: z.number().nullish(),
-  funcionarioCodigo: z.number().nullish(),
-})
-
-const PesquisaFuncionariosResponseSchema = ResponseSchema.extend({
-  resultados: z.array(FuncionarioSchema).default([]),
-})
-
-export type PesquisaFuncionariosRequest = z.infer<typeof PesquisaFuncionariosRequestSchema>
-export type PesquisaFuncionariosResponse = z.infer<typeof PesquisaFuncionariosResponseSchema>
+import { PesquisaFuncionariosRequest, PesquisaFuncionariosRequestSchema } from "../dto/pesquisa-funcionarios-request";
+import { PesquisaFuncionariosResponse } from "../dto/pesquisa-funcionarios-response";
 
 
 export class PesquisaFuncionarios {

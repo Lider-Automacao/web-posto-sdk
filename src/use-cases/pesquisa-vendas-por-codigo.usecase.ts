@@ -1,20 +1,7 @@
 import { WebPostoApi } from "@/api/web-posto-api.service";
 import { WebPostoError } from "@/errors/web-posto.error";
-import { VendaSchema } from "@/models";
-import { ResponseSchema } from "@/types/response-type";
-import z from "zod";
-
-
-const PesquisaVendaPorCodigoRequestSchema = z.object({
-  codigos: z.array(z.number())
-})
-
-const PesquisaVendaPorCodigoResponseSchema = ResponseSchema.extend({
-  resultados: z.array(VendaSchema).default([]),
-})
-
-export type PesquisaVendaPorCodigoRequest = z.infer<typeof PesquisaVendaPorCodigoRequestSchema>
-export type PesquisaVendaPorCodigoResponse = z.infer<typeof PesquisaVendaPorCodigoResponseSchema>
+import { PesquisaVendaPorCodigoRequest, PesquisaVendaPorCodigoRequestSchema } from "../dto/pesquisa-venda-por-codigo-request";
+import { PesquisaVendaPorCodigoResponse } from "../dto/pesquisa-venda-por-codigo-response";
 
 
 export class PesquisaVendaPorCodigo {
