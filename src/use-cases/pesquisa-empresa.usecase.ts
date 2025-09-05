@@ -8,8 +8,9 @@ import z from "zod";
 
 
 const PesquisaEmpresasRequestSchema = QuerySchema.extend({
-  empresaCodigo: z.number().nullable(),
-})
+  empresaCodigo: z.number().nullish(),
+});
+
 
 const PesquisaEmpresasResponseSchema = ResponseSchema.extend({
   resultados: z.array(EmpresaSchema).default([]),
