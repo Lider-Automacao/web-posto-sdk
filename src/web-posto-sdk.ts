@@ -10,7 +10,6 @@ export class WebPostoSDK {
   private readonly funcionarioService: FuncionarioService;
   private readonly vendasService: VendasService;
 
-
   constructor(credenciais: Optional<Credenciais, 'url'>) {
 
     const parsedData = CredenciaisApiSchema.safeParse(credenciais);

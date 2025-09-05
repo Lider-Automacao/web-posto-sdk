@@ -14,6 +14,7 @@ export class EmpresaService {
 
   public async pesquisaTodos(request?: Nullable<PesquisaEmpresasRequest>): Promise<PesquisaEmpresasResponse['resultados']> {
     const useCase = new PesquisaEmpresas(this.api)
-    return buscarTodosOsDadosComPaginacao(useCase.executa, coalesce(request, {} as PesquisaEmpresasRequest))
+    const { limite, ...params } = coalesce(request, { limite: 2_000 })
+    return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
   }
 }

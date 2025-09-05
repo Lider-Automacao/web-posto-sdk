@@ -18,7 +18,7 @@ export class PesquisaFuncionarios {
       throw WebPostoError.fromZodError("Dados de envio inválidos", parsedData.error);
     }
 
-    return this.api.get('/INTEGRACAO/FUNCIONARIO', {
+    return this.api.get('INTEGRACAO/FUNCIONARIO', {
       params: parsedData.data
     });
   }

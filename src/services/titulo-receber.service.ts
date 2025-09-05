@@ -12,8 +12,9 @@ export class TituloReceberService {
     return new PesquisaTituloReceber(this.api).executa(coalesce(request, {} as PesquisaTituloReceberRequest))
   }
 
-  public async pesquisaTodos(request?: Nullable<PesquisaTituloReceberRequest>): Promise<PesquisaTituloReceberResponse['resultados']> {
+  public async pesquisaTodos(request: PesquisaTituloReceberRequest): Promise<PesquisaTituloReceberResponse['resultados']> {
     const useCase = new PesquisaTituloReceber(this.api)
-    return buscarTodosOsDadosComPaginacao(useCase.executa, coalesce(request, {} as PesquisaTituloReceberRequest))
+    const { limite, ...params } = request
+    return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
   }
 }

@@ -14,7 +14,8 @@ export class VendasService {
 
   public async pesquisaTodos(request?: Nullable<PesquisaVendasRequest>): Promise<PesquisaVendasResponse['resultados']> {
     const useCase = new PesquisaVendas(this.api)
-    return buscarTodosOsDadosComPaginacao(useCase.executa, coalesce(request, {} as PesquisaVendasRequest))
+    const { limite, ...params } = coalesce(request, { limite: 2_000 })
+    return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
   }
 
   public async pesquisaPorCodigo(request: PesquisaVendaPorCodigoRequest): Promise<PesquisaVendaPorCodigoResponse> {

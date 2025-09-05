@@ -57,7 +57,7 @@ describe('WebPostoApi', () => {
 
   it('should perform a successful PUT request', async () => {
     clientMock.put.mockResolvedValue({ data: { updated: true } });
-    const result = await api.put<{ foo: string }, { updated: boolean }>('/path', { foo: 'bar' });
+    const result = await api.put('/path', { foo: 'bar' });
     expect(clientMock.put).toHaveBeenCalledWith('/path', { foo: 'bar' }, undefined);
     expect(result).toEqual({ updated: true });
   });

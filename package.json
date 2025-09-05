@@ -1,6 +1,6 @@
 {
   "name": "@liderautomacao/web-posto-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Um pacote npm com TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "version": "npm version patch",
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "vitest",
+    "test": "vitest --passWithNoTests",
+    "test:e2e": "vitest --passWithNoTests --config vitest.config.e2e.mts",
     "coverage": "vitest run --coverage"
   },
   "keywords": [],

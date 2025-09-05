@@ -14,6 +14,7 @@ export class FuncionarioService {
 
   public async pesquisaTodos(request?: Nullable<PesquisaFuncionariosRequest>): Promise<PesquisaFuncionariosResponse['resultados']> {
     const useCase = new PesquisaFuncionarios(this.api)
-    return buscarTodosOsDadosComPaginacao(useCase.executa, coalesce(request, {} as PesquisaFuncionariosRequest))
+    const { limite, ...params } = coalesce(request, { limite: 2_000 })
+    return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
   }
 }
