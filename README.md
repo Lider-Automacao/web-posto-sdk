@@ -65,7 +65,6 @@ buscarEmpresas();
 ## Recursos Futuros
 
 - [ ] Adicionar suporte a todos os endpoints restantes da API Web Posto.
-- [ ] Criar um CLI (Command Line Interface) para interações rápidas via terminal.
 - [ ] Aumentar a cobertura de testes para garantir ainda mais estabilidade.
 
 ## Contribuição
