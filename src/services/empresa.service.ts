@@ -1,8 +1,8 @@
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { PesquisaEmpresasRequest, PesquisaEmpresasResponse } from "@/dto";
-import { PesquisaEmpresas } from "@/use-cases";
-import { buscarTodosOsDadosComPaginacao } from "@/utils";
 import { coalesce, Nullable } from "@raicamposs/toolkit";
+import { WebPostoApi } from "../api/web-posto-api.service";
+import { PesquisaEmpresasRequest, PesquisaEmpresasResponse } from "../dto";
+import { PesquisaEmpresas } from "../use-cases";
+import { buscarTodosOsDadosComPaginacao } from "../utils";
 
 export class EmpresaService {
 

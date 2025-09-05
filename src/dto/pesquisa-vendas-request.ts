@@ -1,5 +1,5 @@
-import { QuerySchema } from "@/types";
-import z from "zod/v4/classic/external.cjs";
+import z from "zod";
+import { QuerySchema } from "../types";
 
 export const PesquisaVendasRequestSchema = QuerySchema.extend({
   turno: z.number().nullish(),

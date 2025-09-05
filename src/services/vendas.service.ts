@@ -1,8 +1,8 @@
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { PesquisaVendaPorCodigoRequest, PesquisaVendaPorCodigoResponse, PesquisaVendasRequest, PesquisaVendasResponse } from "@/dto";
-import { PesquisaVendaPorCodigo, PesquisaVendas } from "@/use-cases";
-import { buscarTodosOsDadosComPaginacao } from "@/utils";
 import { Nullable, coalesce } from "@raicamposs/toolkit";
+import { WebPostoApi } from "../api/web-posto-api.service";
+import { PesquisaVendaPorCodigoRequest, PesquisaVendaPorCodigoResponse, PesquisaVendasRequest, PesquisaVendasResponse } from "../dto";
+import { PesquisaVendaPorCodigo, PesquisaVendas } from "../use-cases";
+import { buscarTodosOsDadosComPaginacao } from "../utils";
 
 export class VendasService {
 

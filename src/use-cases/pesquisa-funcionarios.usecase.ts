@@ -1,7 +1,7 @@
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { WebPostoError } from "@/errors/web-posto.error";
+import { WebPostoApi } from "../api/web-posto-api.service";
 import { PesquisaFuncionariosRequest, PesquisaFuncionariosRequestSchema } from "../dto/pesquisa-funcionarios-request";
 import { PesquisaFuncionariosResponse } from "../dto/pesquisa-funcionarios-response";
+import { WebPostoError } from "../errors/web-posto.error";
 
 
 export class PesquisaFuncionarios {

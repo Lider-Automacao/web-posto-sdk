@@ -1,8 +1,8 @@
 
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { WebPostoError } from "@/errors/web-posto.error";
+import { WebPostoApi } from "../api/web-posto-api.service";
 import { CadastraClienteRequest, CadastraClienteRequestSchema } from "../dto/cadastra-cliente-request";
 import { CadastraClienteResponse, CadastraClienteResponseSchema } from "../dto/cadastra-cliente-response";
+import { WebPostoError } from "../errors/web-posto.error";
 
 export class CadastraCliente {
   private readonly api: WebPostoApi

@@ -1,4 +1,4 @@
-import z from "zod/v4/classic/external.cjs";
+import z from "zod";
 
 export const PesquisaVendaPorCodigoRequestSchema = z.object({
   codigos: z.array(z.number())

@@ -1,5 +1,6 @@
-import { ClienteSchema } from "@/models";
-import z from "zod/v4/classic/external.cjs";
+
+import z from "zod";
+import { ClienteSchema } from "../models";
 
 export const CadastraClienteRequestSchema = z.object({
   cliente: ClienteSchema,

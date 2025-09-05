@@ -1,7 +1,7 @@
 
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { WebPostoError } from "@/errors/web-posto.error";
-import { ClienteUnidadeNegocio, ClienteUnidadeNegocioSchema } from "@/models";
+import { WebPostoApi } from "../api/web-posto-api.service";
+import { WebPostoError } from "../errors/web-posto.error";
+import { ClienteUnidadeNegocio, ClienteUnidadeNegocioSchema } from "../models";
 
 export class AtualizaClienteUnidadeNegocio {
   private readonly api: WebPostoApi

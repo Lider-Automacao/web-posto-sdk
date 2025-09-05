@@ -1,6 +1,6 @@
-import { TituloReceberSchema } from "@/models";
-import { ResponseSchema } from "@/types";
-import z from "zod/v4/classic/external.cjs";
+import z from "zod";
+import { TituloReceberSchema } from "../models";
+import { ResponseSchema } from "../types";
 
 const PesquisaTituloReceberResponseSchema = ResponseSchema.extend({
   resultados: z.array(TituloReceberSchema).default([]),

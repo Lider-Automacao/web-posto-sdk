@@ -1,8 +1,8 @@
 
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { WebPostoError } from "@/errors/web-posto.error";
-import { ClienteSchema } from "@/models";
 import z from "zod";
+import { WebPostoApi } from "../api/web-posto-api.service";
+import { WebPostoError } from "../errors/web-posto.error";
+import { ClienteSchema } from "../models";
 
 
 const AtualizaClienteRequestSchema = z.object({

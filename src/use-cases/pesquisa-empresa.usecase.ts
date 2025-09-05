@@ -1,8 +1,8 @@
 
-import { WebPostoApi } from "@/api/web-posto-api.service";
-import { WebPostoError } from "@/errors/web-posto.error";
+import { WebPostoApi } from "../api/web-posto-api.service";
 import { PesquisaEmpresasRequest, PesquisaEmpresasRequestSchema } from "../dto/pesquisa-empresas-request";
 import { PesquisaEmpresasResponse } from "../dto/pesquisa-empresas-response";
+import { WebPostoError } from "../errors/web-posto.error";
 
 
 export class PesquisaEmpresas {

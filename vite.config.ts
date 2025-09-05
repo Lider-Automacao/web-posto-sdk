@@ -7,7 +7,6 @@ export default defineConfig({
     outDir: compilerOptions.outDir,
   }, plugins: [
     tsConfigPaths(),
-
   ],
   test: {
     globals: true,
