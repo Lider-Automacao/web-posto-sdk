@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "72112e12-ec7e-45f7-88d5-ac5abd2395f9",
+		"name": "Quality_API_POST_PUT Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20565091",
+		"_collection_link": "https://webposto.postman.co/workspace/API_Quality_Automa%25C3%25A7%25C3%25A3o~b1484c3a-3668-4d2c-a90b-7de798a77b2c/collection/20565091-72112e12-ec7e-45f7-88d5-ac5abd2395f9?action=share&source=collection_link&creator=20565091"
+	},
+	"item": [
+		{
+			"name": "Reajustar_Estoque_Combustivel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tanques\": [\r\n    {\r\n      \"tanqueCodigo\": 7097,\r\n      \"estoqueEscritural\": 15000\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/REAJUSTAR_ESTOQUE_PRODUTO_COMBUSTIVEL?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"REAJUSTAR_ESTOQUE_PRODUTO_COMBUSTIVEL"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cnpjCpf\": \"05600000000\",\r\n    \"rg\": \"0\",\r\n    \"nomeFantasia\": \"JOÃO FERNANDO......\",\r\n    \"tipoInscricaoEstadual\": 3,\r\n    \"inscricaoEstadual\": \"\",\r\n    \"razaoSocial\": \"JOÃO FERNANDO.........\",\r\n    \"tipoPessoa\": \"F\",\r\n    \"enderecoTipoLogradouro\": \"RUA\",\r\n    \"enderecoLogradouro\": \"RUA Afonso Pena\",\r\n    \"enderecoNumero\": \"88\",\r\n    \"enderecoComplemento\": \"\",\r\n    \"enderecoBairro\": \"Itapua\",\r\n    \"enderecoCidade\": \"Vila Velha\",\r\n    \"enderecoUf\": \"ES\",\r\n    \"enderecoCep\": \"29.101-502\",\r\n\t\"clienteCodigoExterno\": \"758155\",\r\n\t\"clienteSuspenso\": false,\r\n\t\"motivoClienteSuspenso\": \"\",\r\n\t\"clienteLimite\": true,\r\n\t\"valorClienteLimite\": 15000,\r\n\t\"valorClienteLimiteDisponivel\": 15000,\r\n\t\"exigeCentroCusto\": false,\r\n\t\"centrosCustoCliente\": [\r\n\t\t{\r\n\t\t\"descricao\": \"Veiculo Interno\"\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/CLIENTE/767965?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"CLIENTE",
+						"767965"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricao\": \"Carrinho de Praia\",\r\n  \"descricaoResumida\": \"Carrinho de Praia\",\r\n  \"tipoProduto\": \"P\",\r\n  \"grupoCodigo\": 23842,\r\n  \"codigoExterno\": \"70011\",\r\n  \"unidadeCompra\": \"UN\",\r\n  \"unidadeVenda\": \"UN\",\r\n  \"iat\": \"T\",\r\n  \"ippt\": \"T\",\r\n  \"naturezaReceitaCodigo\": \"101\",\r\n  \"precoCusto\": 175.50,\r\n  \"precoCompra\": 175.50,\r\n  \"precoVenda\": 275.00,\r\n  \"centroCustoCodigo\": 2009,\r\n  \"ativo\": true,\r\n  \"tributoIcms\": {\r\n    \"percentualIcmsSaida\": 0,\r\n    \"cstSaida\": \"060\",\r\n    \"percentualIcmsEntrada\": 0,\r\n    \"cstEntrada\": \"060\",\r\n    \"dsCsosnEntrada\": \"500\",\r\n    \"dsCsosnSaida\": \"500\",\r\n    \"valorPercentualFcp\": 0  \r\n  },\r\n  \"tributoPisCofins\": {\r\n    \"percentualCofinsEntrada\": 7.6,\r\n    \"percentualBaseCalculoCofinsEntrada\": 100,\r\n    \"cstCofinsEntrada\": \"50\",\r\n    \"percentualCofinsSaida\": 7.6,\r\n    \"percentualBaseCalculoCofinsSaida\": 100,\r\n    \"cstCofinsSaida\": \"01\",\r\n    \"percentualPisEntrada\": 1.65,\r\n    \"percentualBaseCalculoPisEntrada\": 100,\r\n    \"cstPisEntrada\": \"50\",\r\n    \"percentualPisSaida\": 1.65,\r\n    \"percentualBaseCalculoPisSaida\": 100,\r\n    \"cstPisSaida\": \"01\"\r\n  },\r\n  \"codigoNcm\": \"27101259\",\r\n  \"codigoCest\": \"0600201\",\r\n  \"permiteVendaEstoqueNegativo\": true,\r\n  \"produtoVendeFracionado\": false,\r\n  \"utilizaCodigoBarras\": false,\r\n  \"utilizaBalanca\": false,\r\n  \"cdCfopEntrada\": \"1.102\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/ALTERAR_PRODUTO/1501861?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"ALTERAR_PRODUTO",
+						"1501861"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Receber_Titulo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"listaVenda\": [\r\n    215174219,\r\n    215175336\r\n  ],\r\n  \"contaCodigo\": 6066,\r\n  \"dataRecebimento\": \"2024-01-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/RECEBER_TITULO?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"RECEBER_TITULO"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grupo_Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricaoGrupo\": \"CLIENTES\",\r\n  \"blLimiteLitros\": true,\r\n  \"vlLimiteLitros\": 150,\r\n  \"vlLimiteLitrosDisponivel\": 100,\r\n  \"blLimiteReais\": true,\r\n  \"vlLimiteReais\": 7050,\r\n  \"flTipoLimite\": \"M\",\r\n  \"flBloqueioFinanceiroAberto\": false,\r\n  \"documentosReinicio\": 3,\r\n  \"codigoExterno\": \"1002309\",\r\n  \"isLimiteLitrosPreenchido\": true,\r\n  \"isLimiteReaisPreenchido\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/GRUPO_CLIENTE/2309?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"GRUPO_CLIENTE",
+						"2309"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cnpjCpf\": \"31642000000\",\r\n    \"rg\": \"\",\r\n    \"nomeFantasia\": \"Jose Vitor antonio\",\r\n    \"tipoInscricaoEstadual\": 1,\r\n    \"inscricaoEstadual\": \"ISENTO\",\r\n    \"razaoSocial\": \"Jose Vitor antonio\",\r\n    \"tipoPessoa\": \"F\",\r\n  \"enderecoBairro\": \"ITAPUA\",\r\n  \"enderecoCep\": \"29101502\",\r\n  \"enderecoCidade\": \"Vila Velha\",\r\n  \"enderecoComplemento\": \"null\",\r\n  \"enderecoLogradouro\": \"Avenida Sao Paulo\",\r\n  \"enderecoNumero\": \"45\",\r\n  \"enderecoTipoLogradouro\": \"AV\",\r\n  \"enderecoUf\": \"ES\",\r\n    \"clienteCodigoExterno\": \"999997\",\r\n    \"clienteSuspenso\": false,\r\n    \"motivoClienteSuspenso\": \"\",\r\n    \"clienteLimite\": true,\r\n    \"valorClienteLimite\": 15000.00,\r\n    \"valorClienteLimiteDisponivel\": 15000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/CLIENTE?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"CLIENTE"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente_Prazo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"listaClientePrazo\": [\r\n    {\r\n      \"praDsPrazo\": \"string\",\r\n      \"praFlTipo\": \"string\",\r\n      \"praFlAtivo\": true,\r\n      \"praFlTipoRecebimento\": \"string\",\r\n      \"praCdQtdDias\": 0,\r\n      \"praFlPrecoEspecial\": \"string\",\r\n      \"praDsReferencia\": \"string\",\r\n      \"praBlVencFimDeSemana\": true,\r\n      \"praVlQuantidadeAbastecimento\": 0,\r\n      \"praBlContabilizarFds\": true,\r\n      \"praBlVinculoNovoCliente\": true,\r\n      \"praVlPrMaxTroco\": 0,\r\n      \"praBlEditarData\": true,\r\n      \"praBlEditarValor\": true\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/CLIENTE_PRAZO?chave={{chave}}&codigoCliente=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"CLIENTE_PRAZO"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						},
+						{
+							"key": "codigoCliente",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente_Unidade_Negocio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"empresaCodigo\": 0,\r\n  \"clienteCodigo\": 0,\r\n  \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/CLIENTE_UNIDADE_NEGOCIO?chave={{chave}}&codigoCliente=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"CLIENTE_UNIDADE_NEGOCIO"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						},
+						{
+							"key": "codigoCliente",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente_Grupo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricaoGrupo\": \"CLIENTES FIDELIDADE\",\r\n  \"blLimiteLitros\": false,\r\n  \"vlLimiteLitros\": 0,\r\n  \"vlLimiteLitrosDisponivel\": 0,\r\n  \"blLimiteReais\": false,\r\n  \"vlLimiteReais\": 0,\r\n  \"vlLimiteReaisDisponivel\": 0,\r\n  \"flTipoLimite\": \"M\",\r\n  \"flBloqueioFinanceiroAberto\": false,\r\n  \"documentosReinicio\": 0,\r\n  \"codigoExterno\": \"10001\",\r\n  \"isLimiteLitrosPreenchido\": true,\r\n  \"isLimiteReaisPreenchido\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/GRUPO_CLIENTE?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"GRUPO_CLIENTE"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricao\": \"Coletor de dados\",\r\n  \"descricaoResumida\": \"Coletor de dados\",\r\n  \"tipoProduto\": \"P\",\r\n  \"grupoCodigo\": 23842,\r\n  \"codigoExterno\": \"70008\",\r\n  \"unidadeCompra\": \"UN\",\r\n  \"unidadeVenda\": \"UN\",\r\n  \"iat\": \"T\",\r\n  \"ippt\": \"T\",\r\n  \"naturezaReceitaCodigo\": \"101\",\r\n  \"precoCusto\": 35.50,\r\n  \"precoCompra\": 35.50,\r\n  \"precoVenda\": 150.00,\r\n  \"centroCustoCodigo\": 2009,\r\n  \"ativo\": true,\r\n  \"tributoIcms\": {\r\n    \"percentualIcmsSaida\": 0,\r\n    \"cstSaida\": \"060\",\r\n    \"percentualIcmsEntrada\": 0,\r\n    \"cstEntrada\": \"060\",\r\n    \"dsCsosnEntrada\": \"500\",\r\n    \"dsCsosnSaida\": \"500\",\r\n    \"valorPercentualFcp\": 0  \r\n  },\r\n  \"tributoPisCofins\": {\r\n    \"percentualCofinsEntrada\": 7.6,\r\n    \"percentualBaseCalculoCofinsEntrada\": 100,\r\n    \"cstCofinsEntrada\": \"50\",\r\n    \"percentualCofinsSaida\": 7.6,\r\n    \"percentualBaseCalculoCofinsSaida\": 100,\r\n    \"cstCofinsSaida\": \"01\",\r\n    \"percentualPisEntrada\": 1.65,\r\n    \"percentualBaseCalculoPisEntrada\": 100,\r\n    \"cstPisEntrada\": \"50\",\r\n    \"percentualPisSaida\": 1.65,\r\n    \"percentualBaseCalculoPisSaida\": 100,\r\n    \"cstPisSaida\": \"01\"\r\n  },\r\n  \"codigoNcm\": \"27101259\",\r\n  \"codigoCest\": \"0600201\",\r\n  \"permiteVendaEstoqueNegativo\": true,\r\n  \"produtoVendeFracionado\": false,\r\n  \"utilizaCodigoBarras\": false,\r\n  \"utilizaBalanca\": false,\r\n  \"cdCfopEntrada\": \"1.102\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/INCLUIR_PRODUTO?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"INCLUIR_PRODUTO"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						},
+						{
+							"key": "empresaCodigo",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reajustar_Produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"itens\": [\r\n    {\r\n      \"cdExternoProduto\": \"24777\",\r\n      \"quantidade\": 30\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/REAJUSTAR_PRODUTO?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"REAJUSTAR_PRODUTO"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar_Preço_Combustivel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"codProduto\": \"string\",\r\n    \"anp\": 0,\r\n    \"precoIdentifid\": [\r\n      {\r\n        \"preco\": 0,\r\n        \"codigoIdentifid\": \"string\"\r\n      }\r\n    ]\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/REAJUSTAR_PRODUTO?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"REAJUSTAR_PRODUTO"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autorizar_NFE_Saida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<nfeProc xmlns=\"http://www.portalfiscal.inf.br/nfe\" versao=\"4.00\">\r\n<NFe xmlns=\"http://www.portalfiscal.inf.br/nfe\">\r\n<infNFe versao=\"4.00\" Id=\"NFe32220910353336000000000000000000021988955233\">\r\n<ide>\r\n<cUF>32</cUF>\r\n<cNF>98895523</cNF>\r\n<natOp>109304 - VENDA REG ECF / SIMP FAT</natOp>\r\n<mod>55</mod>\r\n<serie>32</serie>\r\n<nNF>43</nNF>\r\n<dhEmi>2023-03-30T12:08:08-03:00</dhEmi>\r\n<dhSaiEnt>2023-03-30T12:08:08-03:00</dhSaiEnt>\r\n<tpNF>1</tpNF>\r\n<idDest>1</idDest>\r\n<cMunFG>3205200</cMunFG>\r\n<tpImp>1</tpImp>\r\n<tpEmis>1</tpEmis>\r\n<cDV>3</cDV>\r\n<tpAmb>2</tpAmb>\r\n<finNFe>1</finNFe>\r\n<indFinal>1</indFinal>\r\n<indPres>1</indPres>\r\n<indIntermed>0</indIntermed>\r\n<procEmi>0</procEmi>\r\n<verProc>22.6.1.51</verProc>\r\n<NFref>\r\n<refNFe>32220910353336000000000000000000021988955233</refNFe>\r\n</NFref>\r\n</ide>\r\n<emit>\r\n<CNPJ>00000000000191</CNPJ>\r\n<xNome>EDUARDO</xNome>\r\n<xFant>EDUARDO</xFant>\r\n<enderEmit>\r\n<xLgr>Rua Sao Paulo</xLgr>\r\n<nro>2180</nro>\r\n<xBairro>Itapua</xBairro>\r\n<cMun>3205200</cMun>\r\n<xMun>VILA VELHA</xMun>\r\n<UF>ES</UF>\r\n<CEP>29101502</CEP>\r\n<cPais>1058</cPais>\r\n<xPais>BRASIL</xPais>\r\n<fone>2730625275</fone>\r\n</enderEmit>\r\n<IE>080000090</IE>\r\n<IM>2100000</IM>\r\n<CNAE>6202300</CNAE>\r\n<CRT>3</CRT>\r\n</emit>\r\n<dest>\r\n<CPF>06586703603</CPF>\r\n<xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome>\r\n<enderDest>\r\n<xLgr>Rua Sao Paulo</xLgr>\r\n<nro>2180</nro>\r\n<xCpl>APTO. 502</xCpl>\r\n<xBairro>Itapua</xBairro>\r\n<cMun>3205200</cMun>\r\n<xMun>VILA VELHA</xMun>\r\n<UF>ES</UF>\r\n<CEP>29101502</CEP>\r\n<cPais>1058</cPais>\r\n</enderDest>\r\n<indIEDest>9</indIEDest>\r\n</dest>\r\n<autXML>\r\n<CNPJ>00000026000123</CNPJ>\r\n</autXML>\r\n<det nItem=\"1\">\r\n<prod>\r\n<cProd>000001</cProd>\r\n<cEAN>SEM GTIN</cEAN>\r\n<xProd>GASOLINA COMUM</xProd>\r\n<NCM>27101259</NCM>\r\n<CEST>0103200</CEST>\r\n<CFOP>5929</CFOP>\r\n<uCom>LT</uCom>\r\n<qCom>37.9600</qCom>\r\n<vUnCom>7.2000000000</vUnCom>\r\n<vProd>273.31</vProd>\r\n<cEANTrib>SEM GTIN</cEANTrib>\r\n<uTrib>LT</uTrib>\r\n<qTrib>37.9600</qTrib>\r\n<vUnTrib>7.2000000000</vUnTrib>\r\n<indTot>1</indTot>\r\n<comb>\r\n<cProdANP>320102001</cProdANP>\r\n<descANP>GASOLINA C COMUM</descANP>\r\n<qTemp>37.9600</qTemp>\r\n<UFCons>ES</UFCons>\r\n</comb>\r\n</prod>\r\n<imposto>\r\n<vTotTrib>46.46</vTotTrib>\r\n<ICMS>\r\n<ICMSST>\r\n<orig>0</orig>\r\n<CST>60</CST>\r\n<vBCSTRet>0.00</vBCSTRet>\r\n<pST>0.0000</pST>\r\n<vICMSSubstituto>0.00</vICMSSubstituto>\r\n<vICMSSTRet>0.00</vICMSSTRet>\r\n<vBCSTDest>0.00</vBCSTDest>\r\n<vICMSSTDest>0.00</vICMSSTDest>\r\n</ICMSST>\r\n</ICMS>\r\n<PIS>\r\n<PISAliq>\r\n<CST>01</CST>\r\n<vBC>273.31</vBC>\r\n<pPIS>1.6500</pPIS>\r\n<vPIS>4.51</vPIS>\r\n</PISAliq>\r\n</PIS>\r\n<COFINS>\r\n<COFINSAliq>\r\n<CST>01</CST>\r\n<vBC>273.31</vBC>\r\n<pCOFINS>7.6000</pCOFINS>\r\n<vCOFINS>20.77</vCOFINS>\r\n</COFINSAliq>\r\n</COFINS>\r\n</imposto>\r\n</det>\r\n<total>\r\n<ICMSTot>\r\n<vBC>0.00</vBC>\r\n<vICMS>0.00</vICMS>\r\n<vICMSDeson>0.00</vICMSDeson>\r\n<vFCP>0.00</vFCP>\r\n<vBCST>0.00</vBCST>\r\n<vST>0.00</vST>\r\n<vFCPST>0.00</vFCPST>\r\n<vFCPSTRet>0.00</vFCPSTRet>\r\n<vProd>273.31</vProd>\r\n<vFrete>0.00</vFrete>\r\n<vSeg>0.00</vSeg>\r\n<vDesc>0.00</vDesc>\r\n<vII>0.00</vII>\r\n<vIPI>0.00</vIPI>\r\n<vIPIDevol>0.00</vIPIDevol>\r\n<vPIS>4.51</vPIS>\r\n<vCOFINS>20.77</vCOFINS>\r\n<vOutro>0.00</vOutro>\r\n<vNF>273.31</vNF>\r\n<vTotTrib>46.46</vTotTrib>\r\n</ICMSTot>\r\n</total>\r\n<transp>\r\n<modFrete>9</modFrete>\r\n</transp>\r\n<cobr>\r\n<fat>\r\n<nFat>000000002</nFat>\r\n<vOrig>273.31</vOrig>\r\n<vDesc>0.00</vDesc>\r\n<vLiq>273.31</vLiq>\r\n</fat>\r\n<dup>\r\n<nDup>001</nDup>\r\n<dVenc>2022-10-19</dVenc>\r\n<vDup>273.31</vDup>\r\n</dup>\r\n</cobr>\r\n<pag>\r\n<detPag>\r\n<tPag>14</tPag>\r\n<vPag>273.31</vPag>\r\n</detPag>\r\n</pag>\r\n<infAdic>\r\n<infCpl>Cliente so paga depois do dia 25. ;Motorista(s): EDUARDO;Obs(s): Observacoes;Informacoes da ECF: NFC - NFCE - Serie: 4 - Cupons: 8;Valor Aprox. Tributos: R$ 0,00 Federal, R$ 46,46 Estadual, Fonte IBPT.</infCpl>\r\n</infAdic>\r\n<infRespTec>\r\n<CNPJ>00000036000191</CNPJ>\r\n<xContato>Teste</xContato>\r\n<email>sd54as65d4a64sd@automacao.com</email>\r\n<fone>00000625000</fone>\r\n</infRespTec>\r\n</infNFe>\r\n<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\">\r\n<SignedInfo>\r\n<CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"/>\r\n<SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"/>\r\n<Reference URI=\"#NFe32220910353336000000000000000000021988955233\">\r\n<Transforms>\r\n<Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/>\r\n<Transform Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"/>\r\n</Transforms>\r\n<DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"/>\r\n<DigestValue>omJtwG1MqQZx9OVggHdZ5OUssVo=</DigestValue>\r\n</Reference>\r\n</SignedInfo>\r\n<SignatureValue>IuMR99vkSS8KR+amvz/PKbJEXel3/Ct5VDeU2tyu8WNsdzAyUNU6Jz7DYN5sT2zAL9adnWVi3IMpsc8a2dyknSqcbmLgpdTamsRJw1Ll+1CEQEfVfPQ4sgxZB+eL5nkvt3uLLCmkkpGTdE6cLrd8WKnODjkPZcwf8ji1JwJ2yeYo8DnFgEmkO3iLn7RpG29Cgjvs0i5XAzl7dKu+DMHUhM8Kx4RMgErMIlTanUA0aMinI7S53trCz6Ut494/IffEMgxV9jKHytsD/4UStMFbVcRYh2elYkSGNSKK5xkQ==</SignatureValue>\r\n<KeyInfo>\r\n<X509Data>\r\n<X509Certificate>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</X509Certificate>\r\n</X509Data>\r\n</KeyInfo>\r\n</Signature>\r\n</NFe>\r\n<protNFe versao=\"4.00\">\r\n<infProt>\r\n<tpAmb>2</tpAmb>\r\n<verAplic>SVRS202</verAplic>\r\n<chNFe>32220910353336000000000000000000021988955233</chNFe>\r\n<dhRecbto>2022-09-19T12:08:20-03:00</dhRecbto>\r\n<nProt>332201</nProt>\r\n<digVal>omJtwG1MHdZ5OUssVo=</digVal>\r\n<cStat>100</cStat>\r\n<xMotivo>Autorizado o uso da NF-e</xMotivo>\r\n</infProt>\r\n</protNFe>\r\n</nfeProc>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/INTEGRACAO/AUTORIZAR_NFE_SAIDA/2368882?chave={{chave}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"INTEGRACAO",
+						"AUTORIZAR_NFE_SAIDA",
+						"2368882"
+					],
+					"query": [
+						{
+							"key": "chave",
+							"value": "{{chave}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "chave",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "URL",
+			"value": "https://web.qualityautomacao.com.br",
+			"type": "string"
+		}
+	]
+}

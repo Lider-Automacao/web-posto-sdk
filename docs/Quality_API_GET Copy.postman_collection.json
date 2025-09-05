@@ -1,0 +1,2191 @@
+{
+	"info": {
+		"_postman_id": "807b0275-e8fc-467f-863c-aa13bf0df3b5",
+		"name": "Quality_API_GET Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20565091",
+		"_collection_link": "https://webposto.postman.co/workspace/API_Quality_Automa%25C3%25A7%25C3%25A3o~b1484c3a-3668-4d2c-a90b-7de798a77b2c/collection/20565091-807b0275-e8fc-467f-863c-aa13bf0df3b5?action=share&source=collection_link&creator=20565091"
+	},
+	"item": [
+		{
+			"name": "Estoque",
+			"item": [
+				{
+					"name": "Estoque_Periodo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/ESTOQUE_PERIODO?chave={{chave}}&dataFinal=2023-06-20&empresaCodigo=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"ESTOQUE_PERIODO"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-06-20"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto_LMC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PRODUTO_LMC_LMP?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PRODUTO_LMC_LMP"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LMC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/LMC?CHAVE={{chave}}&dataInicial=2023-01-17&dataFinal=2023-01-17",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"LMC"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-01-17"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-01-17"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compra",
+			"item": [
+				{
+					"name": "Compra",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/COMPRA?chave={{chave}}&empresaCodigo=&dataInicial=2023-10-20&dataFinal=2023-10-20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"COMPRA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": ""
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-10-20"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-10-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venda",
+			"item": [
+				{
+					"name": "Venda",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/VENDA?chave={{chave}}&dataInicial=2023-12-28&dataFinal=2023-12-28",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"VENDA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-12-28"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-12-28"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "tipoData",
+									"value": "ENTRADA",
+									"disabled": true
+								},
+								{
+									"key": "vendaCodigo",
+									"value": "215171576",
+									"disabled": true
+								},
+								{
+									"key": "limite",
+									"value": "2000",
+									"disabled": true
+								},
+								{
+									"key": "ultimoCodigo",
+									"value": "8911737",
+									"disabled": true
+								},
+								{
+									"key": "turno",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "situacao",
+									"value": "T",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Venda_ID_List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/VENDA/:idList?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"VENDA",
+								":idList"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "idList",
+									"value": "168905204,169522556,170553993,185504114"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Venda_Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/VENDA_ITEM?CHAVE={{chave}}&dataInicial=2023-12-19&dataFinal=2023-12-19",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"VENDA_ITEM"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-12-19"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-12-19"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "vendaCodigo",
+									"value": "214491629",
+									"disabled": true
+								},
+								{
+									"key": "tipoData",
+									"value": "EMISSAO",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Venda_Forma_Pagamento",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/VENDA_FORMA_PAGAMENTO?CHAVE={{chave}}&dataInicial=2024-02-01&dataFinal=2024-02-01",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"VENDA_FORMA_PAGAMENTO"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "tipoData",
+									"value": "EMISSAO",
+									"disabled": true
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dataInicial",
+									"value": "2024-02-01"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2024-02-01"
+								},
+								{
+									"key": "ultimoCodigo",
+									"value": "193604080",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Abastecimento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/ABASTECIMENTO?CHAVE={{chave}}&dataInicial=2024-02-15&dataFinal=2024-02-15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"ABASTECIMENTO"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2024-02-15"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2024-02-15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cadastros",
+			"item": [
+				{
+					"name": "Produto_Grupo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/GRUPO?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"GRUPO"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto_SubGrupo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CONSULTAR_SUB_GRUPO_REDE?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CONSULTAR_SUB_GRUPO_REDE"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PRODUTO?chave={{chave}}&limite=1000&produtoCodigoExterno=24777",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PRODUTO"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "2778",
+									"disabled": true
+								},
+								{
+									"key": "limite",
+									"value": "1000"
+								},
+								{
+									"key": "produtoCodigoExterno",
+									"value": "24777"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto_Empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PRODUTO_EMPRESA?chave={{chave}}&limite=2000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PRODUTO_EMPRESA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "limite",
+									"value": "2000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto_LMC_LMP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PRODUTO_LMC_LMP?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PRODUTO_LMC_LMP"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente_Grupo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/GRUPO_CLIENTE?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"GRUPO_CLIENTE"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CLIENTE?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CLIENTE"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "limite",
+									"value": "1000",
+									"disabled": true
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente_empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CLIENTE_EMPRESA?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CLIENTE_EMPRESA"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "ultimoCodigo",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fornecedor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/FORNECEDOR?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"FORNECEDOR"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/FUNCIONARIO?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"FUNCIONARIO"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario_Função",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/FUNCOES?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"FUNCOES"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario_Identifid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CONSULTAR_FUNCIONARIO_IDENTFID?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CONSULTAR_FUNCIONARIO_IDENTFID"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Conta_Bancaria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CONTA?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CONTA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prazo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PRAZOS?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PRAZOS"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forma_Pagamento",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/FORMA_PAGAMENTO?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"FORMA_PAGAMENTO"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administradora",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/ADMINISTRADORA?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"ADMINISTRADORA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PDV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PDV?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PDV"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PIS_COFINS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PIS_COFINS?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PIS_COFINS"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ICMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/ICMS?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"ICMS"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/USUARIO?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"USUARIO"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario_Empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/USUARIO_EMPRESA?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"USUARIO_EMPRESA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/EMPRESAS?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"EMPRESAS"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bico/Bomba/Tanque",
+			"item": [
+				{
+					"name": "Tanque",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/TANQUE?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"TANQUE"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/BICO?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"BICO"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bomba",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/BOMBA?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"BOMBA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financeiro",
+			"item": [
+				{
+					"name": "Financeiro a Receber",
+					"item": [
+						{
+							"name": "Titulo_Receber",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/TITULO_RECEBER?chave={{chave}}&dataInicial=2024-01-30&dataFinal=2024-01-30",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"TITULO_RECEBER"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2024-01-30"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2024-01-30"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "apenasPendente",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "dataFiltro",
+											"value": "VENCIMENTO",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Duplicata",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/DUPLICATA?chave={{chave}}&dataInicial=2024-01-03&dataFinal=2024-01-03",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"DUPLICATA"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2024-01-03"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2024-01-03"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "2778",
+											"disabled": true
+										},
+										{
+											"key": "dataFiltro",
+											"value": "MOVIMENTO",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cheque",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/CHEQUE?chave={{chave}}&dataInicial=2023-01-01&dataFinal=2023-07-30",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"CHEQUE"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-07-30"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "apenasPendente",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cartao",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/CARTAO?chave={{chave}}&dataInicial=2023-06-01&dataFinal=2023-09-30",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"CARTAO"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-06-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-09-30"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "limite",
+											"value": "100",
+											"disabled": true
+										},
+										{
+											"key": "vendaCodigo",
+											"value": "201388821",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cartao_Remessa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/CARTAO_REMESSA?chave={{chave}}&dataInicial=2023-08-01&dataFinal=2023-08-31",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"CARTAO_REMESSA"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-08-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-08-31"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Financeiro a Pagar",
+					"item": [
+						{
+							"name": "Titulo_Pagar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/TITULO_PAGAR?chave={{chave}}&dataInicial=2023-01-01&dataFinal=2023-11-29",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"TITULO_PAGAR"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-11-29"
+										},
+										{
+											"key": "apenasPendente",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "dataFiltro",
+											"value": "MOVIMENTO",
+											"disabled": true
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "dataHoraAtualizacao",
+											"value": "2023-11-01T08:00:00.000Z",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Créditos",
+					"item": [
+						{
+							"name": "Vale_Funcionario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/VALE_FUNCIONARIO?chave={{chave}}&dataInicial=2022-09-29&dataFinal=2022-09-29",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"VALE_FUNCIONARIO"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2022-09-29"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2022-09-29"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caixa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CAIXA?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CAIXA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caixa_Apresentado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CAIXA_APRESENTADO?chave={{chave}}&dataInicial=2023-09-11&dataFinal=2023-12-14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CAIXA_APRESENTADO"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-09-11"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-12-14"
+								},
+								{
+									"key": "tipoData",
+									"value": "EMISSAO",
+									"disabled": true
+								},
+								{
+									"key": "limite",
+									"value": "200",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimento_Conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/MOVIMENTO_CONTA?chave={{chave}}&dataInicial=2024-02-01&dataFinal=2024-02-02",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"MOVIMENTO_CONTA"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2024-02-01"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2024-02-02"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fiscal",
+			"item": [
+				{
+					"name": "Documentos de Saída",
+					"item": [
+						{
+							"name": "SAT",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/SAT?chave={{chave}}&dataInicial=2023-03-10&dataFinal=2023-03-10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"SAT"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-03-10"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-03-10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NFCe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/NFCE?chave={{chave}}&dataInicial=2023-12-01&dataFinal=2023-12-31",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"NFCE"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-12-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-12-31"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "situacao",
+											"value": "A",
+											"disabled": true
+										},
+										{
+											"key": "vendaCodigo",
+											"value": "215175597",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NFCE_XML",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/NFCE/150199947/XML?chave={{chave}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"NFCE",
+										"150199947",
+										"XML"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "2778",
+											"disabled": true
+										},
+										{
+											"key": "modeloDocumento",
+											"value": "6",
+											"disabled": true
+										},
+										{
+											"key": "numeroDocumento",
+											"value": "24300",
+											"disabled": true
+										},
+										{
+											"key": "serieDocumento",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NFE_Saida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/NFE_SAIDA?chave={{chave}}&dataInicial=2023-10-20&dataFinal=2023-10-20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"NFE_SAIDA"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-10-20"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-10-20"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "2778",
+											"disabled": true
+										},
+										{
+											"key": "chaveDocumento",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NFe_XML",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/NFE/XML?chave={{chave}}&empresaCodigo=&modeloDocumento=55&numeroDocumento=000000068&serieDocumento=31",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"NFE",
+										"XML"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": ""
+										},
+										{
+											"key": "modeloDocumento",
+											"value": "55"
+										},
+										{
+											"key": "numeroDocumento",
+											"value": "000000068"
+										},
+										{
+											"key": "serieDocumento",
+											"value": "31"
+										},
+										{
+											"key": "id",
+											"value": "0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DFE_XML",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/DFE_XML?chave={{chave}}&empresaCodigo=&numeroDocumento=24300&modeloDocumento=65&serieDocumento=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"DFE_XML"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": ""
+										},
+										{
+											"key": "numeroDocumento",
+											"value": "24300"
+										},
+										{
+											"key": "modeloDocumento",
+											"value": "65"
+										},
+										{
+											"key": "serieDocumento",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Documentos de Entrada",
+					"item": [
+						{
+							"name": "Serviço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/NOTA_SERVICO?chave={{chave}}&dataInicial=2023-01-01&dataFinal=2023-10-30",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"NOTA_SERVICO"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-10-30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Compra",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/COMPRA?chave={{chave}}&dataInicial=2023-09-01&dataFinal=2023-10-30&tipoData=EMISSAO",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"COMPRA"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-09-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-10-30"
+										},
+										{
+											"key": "tipoData",
+											"value": "EMISSAO"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Compra_Item",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/INTEGRACAO/COMPRA_ITEM?chave={{chave}}&compraCodigo=1772726&dataInicial=2023-09-01&dataFinal=2023-10-30&tipoData=EMISSAO",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"INTEGRACAO",
+										"COMPRA_ITEM"
+									],
+									"query": [
+										{
+											"key": "chave",
+											"value": "{{chave}}"
+										},
+										{
+											"key": "empresaCodigo",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "compraCodigo",
+											"value": "1772726"
+										},
+										{
+											"key": "dataInicial",
+											"value": "2023-09-01"
+										},
+										{
+											"key": "dataFinal",
+											"value": "2023-10-30"
+										},
+										{
+											"key": "tipoData",
+											"value": "EMISSAO"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Plano de Contas e Centro de Custo",
+			"item": [
+				{
+					"name": "Centro_De_Custo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CENTRO_CUSTO?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CENTRO_CUSTO"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plano_Conta_Gerencial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PLANO_CONTA_GERENCIAL?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PLANO_CONTA_GERENCIAL"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Relatórios",
+			"item": [
+				{
+					"name": "DRE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/DRE?chave={{chave}}&dataInicial=2024-01-01&dataFinal=2024-01-05&apuracaoCaixa=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"DRE"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2024-01-05"
+								},
+								{
+									"key": "filiais",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "apuracaoCaixa",
+									"value": "true"
+								},
+								{
+									"key": "apurarJurosDescontos",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mapa_Desempenho",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/MAPA_DESEMPENHO?CHAVE={{chave}}&dataInicial=2023-03-01&dataFinal=2023-03-31",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"MAPA_DESEMPENHO"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-03-01"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-03-31"
+								},
+								{
+									"key": "empresaCodigo",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analise_Vendas_Combustivel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CONSULTAR_ANALISE_VENDAS_COMBUSTIVEL?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CONSULTAR_ANALISE_VENDAS_COMBUSTIVEL"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Despesas_Financeiro_Rede",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/CONSULTAR_DESPESAS_FINANCEIRO_REDE?chave={{chave}}&dataInicial=2023-01-01&dataFinal=2023-10-30",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"CONSULTAR_DESPESAS_FINANCEIRO_REDE"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "dataInicial",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "dataFinal",
+									"value": "2023-10-30"
+								},
+								{
+									"key": "apuraCaixa",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meta",
+			"item": [
+				{
+					"name": "Grupo_Meta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/GRUPO_META?chave={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"GRUPO_META"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario_Meta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/FUNCIONARIO_META?chave={{chave}}&grupoMetaCodigo=482",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"FUNCIONARIO_META"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "grupoMetaCodigo",
+									"value": "482"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto_Meta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PRODUTO_META?chave={{chave}}&grupoMetaCodigo=482",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PRODUTO_META"
+							],
+							"query": [
+								{
+									"key": "chave",
+									"value": "{{chave}}"
+								},
+								{
+									"key": "grupoMetaCodigo",
+									"value": "482"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contábil",
+			"item": [
+				{
+					"name": "Plano_Conta_Contabil",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/INTEGRACAO/PLANO_CONTA_CONTABIL?CHAVE={{chave}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"INTEGRACAO",
+								"PLANO_CONTA_CONTABIL"
+							],
+							"query": [
+								{
+									"key": "CHAVE",
+									"value": "{{chave}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://web.qualityautomacao.com.br",
+			"type": "string"
+		},
+		{
+			"key": "chave",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
