@@ -1,1 +1,2 @@
-export * from './busca-tudo';
+export * from './buscar-todos-os-dados-com-paginacao';
+

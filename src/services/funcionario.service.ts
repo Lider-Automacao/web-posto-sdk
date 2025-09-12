@@ -2,7 +2,7 @@ import { coalesce, Nullable } from "@raicamposs/toolkit";
 import { WebPostoApi } from "../api/web-posto-api.service";
 import { PesquisaFuncionariosRequest, PesquisaFuncionariosResponse } from "../dto";
 import { PesquisaFuncionarios } from "../use-cases";
-import { buscarTodosOsDadosComPaginacao } from "../utils";
+import { buscarTodosOsDadosComPaginacao, buscarTodosOsDadosComPaginacaoStream } from "../utils";
 
 export class FuncionarioService {
 
@@ -16,5 +16,11 @@ export class FuncionarioService {
     const useCase = new PesquisaFuncionarios(this.api)
     const { limite, ...params } = coalesce(request, { limite: 2_000 })
     return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
+  }
+
+  public pesquisaTodosAsStream(request: PesquisaFuncionariosRequest): AsyncIterable<PesquisaFuncionariosResponse['resultados'][0]> {
+    const useCase = new PesquisaFuncionarios(this.api)
+    const { limite, ...params } = coalesce(request, { limite: 500 })
+    return buscarTodosOsDadosComPaginacaoStream(useCase.executa.bind(useCase), params, limite)
   }
 }

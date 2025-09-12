@@ -2,7 +2,7 @@ import { Nullable, coalesce } from "@raicamposs/toolkit";
 import { WebPostoApi } from "../api/web-posto-api.service";
 import { PesquisaVendaPorCodigoRequest, PesquisaVendaPorCodigoResponse, PesquisaVendasRequest, PesquisaVendasResponse } from "../dto";
 import { PesquisaVendaPorCodigo, PesquisaVendas } from "../use-cases";
-import { buscarTodosOsDadosComPaginacao } from "../utils";
+import { buscarTodosOsDadosComPaginacao, buscarTodosOsDadosComPaginacaoStream } from "../utils";
 
 export class VendasService {
 
@@ -16,6 +16,12 @@ export class VendasService {
     const useCase = new PesquisaVendas(this.api)
     const { limite, ...params } = coalesce(request, { limite: 2_000 })
     return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
+  }
+
+  public pesquisaTodosAsStream(request: PesquisaVendasRequest): AsyncIterable<PesquisaVendasResponse['resultados'][0]> {
+    const useCase = new PesquisaVendas(this.api)
+    const { limite, ...params } = coalesce(request, { limite: 500 })
+    return buscarTodosOsDadosComPaginacaoStream(useCase.executa.bind(useCase), params, limite)
   }
 
   public async pesquisaPorCodigo(request: PesquisaVendaPorCodigoRequest): Promise<PesquisaVendaPorCodigoResponse> {

@@ -2,7 +2,7 @@ import { coalesce, Nullable } from "@raicamposs/toolkit";
 import { WebPostoApi } from "../api/web-posto-api.service";
 import { PesquisaEmpresasRequest, PesquisaEmpresasResponse } from "../dto";
 import { PesquisaEmpresas } from "../use-cases";
-import { buscarTodosOsDadosComPaginacao } from "../utils";
+import { buscarTodosOsDadosComPaginacao, buscarTodosOsDadosComPaginacaoStream } from "../utils";
 
 export class EmpresaService {
 
@@ -16,5 +16,12 @@ export class EmpresaService {
     const useCase = new PesquisaEmpresas(this.api)
     const { limite, ...params } = coalesce(request, { limite: 2_000 })
     return buscarTodosOsDadosComPaginacao(useCase.executa.bind(useCase), params, limite)
+  }
+
+
+  public pesquisaTodosAsStream(request: PesquisaEmpresasRequest): AsyncIterable<PesquisaEmpresasResponse['resultados'][0]> {
+    const useCase = new PesquisaEmpresas(this.api)
+    const { limite, ...params } = coalesce(request, { limite: 500 })
+    return buscarTodosOsDadosComPaginacaoStream(useCase.executa.bind(useCase), params, limite)
   }
 }
