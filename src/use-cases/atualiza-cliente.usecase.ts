@@ -28,8 +28,6 @@ export class AtualizaCliente {
 
     const { cliente, id } = parsedData.data
 
-    await this.api.put(`/INTEGRACAO/CLIENTE/${id}`, {
-      params: cliente
-    });
+    await this.api.put(`/INTEGRACAO/CLIENTE/${id}`, cliente);
   }
 }

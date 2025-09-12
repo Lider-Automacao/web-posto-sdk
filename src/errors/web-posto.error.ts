@@ -1,9 +1,10 @@
 // src/utils/sdkError.ts
 
-import { isNullOrUndefined } from '@raicamposs/toolkit';
+import { isNullOrUndefined, ObjectEntries } from '@raicamposs/toolkit';
 import { AxiosError, HttpStatusCode } from 'axios';
 import * as zPT from 'zod/v4';
-import { ZodError, flattenError } from 'zod/v4';
+import { flattenError, ZodError } from 'zod/v4';
+import { DicionarioDeErros } from './erros';
 
 zPT.config(zPT.locales.pt())
 
@@ -50,7 +51,7 @@ export class WebPostoError extends Error {
 
 
   private static handleData(data: unknown) {
-    let message = 'Ocorreu um erro no servidor da WebPostoApi.';
+    let message = 'Ocorreu um erro no servidor do WebPostoApi.';
     let description = '';
 
     if (isNullOrUndefined(data)) {
@@ -58,7 +59,14 @@ export class WebPostoError extends Error {
     }
 
     if (typeof data !== 'object') {
-      message = data.toString()
+      description = JSON.stringify(data)
+
+      for (const [key, element] of ObjectEntries(DicionarioDeErros)) {
+        if (key.includes(description)) {
+          return element
+        }
+      }
+
       return { message, description }
     }
 

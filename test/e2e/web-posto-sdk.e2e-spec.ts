@@ -1,7 +1,10 @@
+import { faker } from '@faker-js/faker';
+import { CPF } from '@raicamposs/toolkit';
 import { describe, expect, it } from "vitest";
-import { WebPostoSDK } from "../../src";
+import { ClienteSchema, WebPostoSDK } from "../../src";
 
 require('dotenv').config()
+
 
 describe("WebPostoSDK", () => {
   const credenciais = {
@@ -51,4 +54,69 @@ describe("WebPostoSDK", () => {
     expect(data).toBeDefined();
     expect(data.length).greaterThan(0);
   });
+
+  it("Deve pesquisar as empresas", async () => {
+    const sdk = new WebPostoSDK(credenciais);
+    const data = await sdk.empresa.pesquisaTodos();
+
+    expect(data).toBeDefined();
+    expect(data.length).greaterThan(0);
+  });
+
+
+  it("Deve cadastrar um Cliente", async () => {
+    const sdk = new WebPostoSDK(credenciais);
+    const cliente = buildClient()
+    const result = await sdk.cliente.cadastra({ cliente });
+
+    expect(result).toBeDefined();
+    expect(result.codCliente).greaterThan(0);
+  });
+
+  it("Deve pesquisar as atualiza as unidades de negocio", async () => {
+    const sdk = new WebPostoSDK(credenciais);
+    const cliente = buildClient()
+
+    const empresas = await sdk.empresa.pesquisaTodos()
+    const { codCliente } = await sdk.cliente.cadastra({ cliente });
+
+    for (const empresa of empresas) {
+      await sdk.cliente.atualizaUnidadeNegocio({
+        empresaCodigo: empresa.codigo,
+        clienteCodigo: codCliente,
+        ativo: true,
+      })
+    }
+  }, 20_000);
+
 });
+
+const buildClient = () => {
+  return ClienteSchema.parse({
+    "cnpjCpf": CPF.random().value,
+    "rg": null,
+    "nomeFantasia": faker.person.middleName(),
+    "tipoInscricaoEstadual": 3,
+    "inscricaoEstadual": null,
+    "razaoSocial": faker.person.fullName(),
+    "tipoPessoa": "F",
+    "enderecoTipoLogradouro": "Rua",
+    "enderecoLogradouro": "AVENIDA ANTÔNIO GUIMARÃES",
+    "enderecoNumero": "90",
+    "enderecoComplemento": "",
+    "enderecoBairro": "ITAPEBUSSU",
+    "enderecoCidade": "GUARAPARI",
+    "enderecoUf": "ES",
+    "enderecoCep": "29.210-190",
+    "clienteCodigoExterno": null,
+    "clienteSuspenso": false,
+    "motivoClienteSuspenso": "",
+    "clienteLimite": false,
+    "valorClienteLimite": 0,
+    "valorClienteLimiteDisponivel": 0,
+    "exigeCentroCusto": false,
+    "documentosEmitidos": -1,
+    "centrosCustoCliente": [],
+    "clienteContato": []
+  })
+}

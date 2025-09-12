@@ -1,6 +1,7 @@
 
 import { coalesce, isEmpty } from '@raicamposs/toolkit'
 import z from 'zod/v4'
+import { CPFOrCNPJScheme } from '../types'
 import { CentroCustoClienteSchema } from './centro-custo-cliente'
 import { ContatoClienteSchema } from './contato-cliente'
 
@@ -41,7 +42,7 @@ export const TelefoneSchema = z
   })
 
 export const ClienteSchema = z.object({
-  cnpjCpf: z.string(),
+  cnpjCpf: CPFOrCNPJScheme,
   rg: z.string().nullish().optional(),
   nomeFantasia: z.string().default(''),
   tipoInscricaoEstadual: z.union([z.literal(1), z.literal(2), z.literal(3)]),

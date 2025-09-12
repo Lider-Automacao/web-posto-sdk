@@ -20,9 +20,7 @@ export class CadastraCliente {
 
     const { cliente } = parsedData.data
 
-    const data = await this.api.post('/INTEGRACAO/CLIENTE', {
-      params: cliente
-    });
+    const data = await this.api.post('/INTEGRACAO/CLIENTE', cliente);
 
     return CadastraClienteResponseSchema.parse(data);
   }
